@@ -3,7 +3,7 @@ import { brand } from "../config/brand";
 import { client } from "../data/client";
 
 const nav = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/raptors" },
   { label: "About", href: "/raptors/about" },
   { label: "Services", href: "/raptors/services" },
   { label: "Reviews", href: "/raptors/reviews" },
@@ -23,7 +23,7 @@ const currentPath = Astro.url.pathname;
   >
     <!-- Logo -->
     <a
-      href="/"
+      href="/raptors"
       class="font-heading text-xl font-bold uppercase tracking-wide text-primary transition-opacity hover:opacity-80"
     >
       {brand.name}

@@ -23,7 +23,9 @@ const segments = Astro.url.pathname
         class="flex flex-wrap items-center gap-1.5 text-sm text-primary-fg/60"
       >
         <li>
-          <a href="/" class="transition-colors hover:text-primary-fg">Home</a>
+          <a href="/raptors" class="transition-colors hover:text-primary-fg"
+            >Home</a
+          >
         </li>
         {
           segments.map(({ label, href, isLast }) => (

@@ -29,7 +29,7 @@ export const client = {
     instagram: 'https://www.instagram.com/raptors.eisenstadt',
     google: 'https://maps.app.goo.gl/1Zd3RiohaXJmqGaP6',
   },
-  domain: 'https://www.example.com',
+  domain: 'https://jano-kucera.github.io/',
 } as const;
 
 export type Client = typeof client;

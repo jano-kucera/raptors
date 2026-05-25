@@ -18,7 +18,7 @@ export const brand = {
   tagline: 'Eishockey aus Leidenschaft',
   description:
     'Willkommen beim burgenländischen Eishockeyverein, der für Herz, Härte und echten Teamgeist steht. Bei uns trifft Tradition auf Tempo, Nachwuchs auf Kampfgeist - und Fans auf ein unvergleichliches Erlebnis am Platz.',
-  url: 'https://www.raptors-eisenstadt.at/',
+  url: 'https://jano-kucera.github.io/raptors/',
   locale: 'de_AT',
 
   // ── Fonts ──────────────────────────────────────────────────────────────────
