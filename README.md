@@ -47,26 +47,26 @@ Open this file and replace every placeholder value with the real business inform
 
 ```ts
 export const client = {
-  name: 'Your Business Name',         // Used in the header, footer, and SEO
-  email: 'hello@yourbusiness.com',
-  phoneForTel: '303-555-0100',        // Format: digits and hyphens only (used in tel: links)
-  phoneFormatted: '(303) 555-0100',   // Format: however you want it displayed
-  license: 'Lic# 123456',            // Contractor license number — leave empty '' to hide
+  name: "Your Business Name", // Used in the header, footer, and SEO
+  email: "hello@yourbusiness.com",
+  phoneForTel: "303-555-0100", // Format: digits and hyphens only (used in tel: links)
+  phoneFormatted: "(303) 555-0100", // Format: however you want it displayed
+  license: "Lic# 123456", // Contractor license number — leave empty '' to hide
   address: {
-    lineOne: '123 Main Street',
-    lineTwo: 'Suite 100',             // Leave empty '' if no suite/unit
-    city: 'Denver',
-    state: 'CO',
-    zip: '80206',
-    country: 'US',
-    mapLink: 'https://maps.app.goo.gl/your-link', // Google Maps link to the business
+    lineOne: "123 Main Street",
+    lineTwo: "Suite 100", // Leave empty '' if no suite/unit
+    city: "Denver",
+    state: "CO",
+    zip: "80206",
+    country: "US",
+    mapLink: "https://maps.app.goo.gl/your-link", // Google Maps link to the business
   },
   socials: {
-    facebook:  'https://facebook.com/yourbusiness',   // Leave empty '' to hide the icon
-    instagram: 'https://instagram.com/yourbusiness',  // Leave empty '' to hide the icon
-    google:    'https://g.page/yourbusiness',          // Google Business Profile link
+    facebook: "https://facebook.com/yourbusiness", // Leave empty '' to hide the icon
+    instagram: "https://instagram.com/yourbusiness", // Leave empty '' to hide the icon
+    google: "https://g.page/yourbusiness", // Google Business Profile link
   },
-  domain: 'https://www.yourdomain.com',
+  domain: "https://www.yourdomain.com",
 };
 ```
 
@@ -80,20 +80,20 @@ This controls the site name, tagline, colors, and fonts.
 
 ```ts
 export const brand = {
-  name: 'Your Business Name',
-  tagline: 'Professional service you can trust.',
-  description: 'A short sentence used as the default SEO meta description.',
-  url: 'https://www.yourdomain.com',  // Must match client.domain
+  name: "Your Business Name",
+  tagline: "Professional service you can trust.",
+  description: "A short sentence used as the default SEO meta description.",
+  url: "https://www.yourdomain.com", // Must match client.domain
 
   fonts: {
-    body: 'Inter',      // Google Fonts name for body text
-    display: 'Oswald',  // Google Fonts name for headings
+    body: "Inter", // Google Fonts name for body text
+    display: "Oswald", // Google Fonts name for headings
   },
 
   colors: {
-    primary:    '#1B3A6B',  // Main brand color (nav, buttons, headings)
-    primaryFg:  '#ffffff',  // Text color on top of primary backgrounds
-    accent:     '#F97316',  // CTA buttons, highlights
+    primary: "#1B3A6B", // Main brand color (nav, buttons, headings)
+    primaryFg: "#ffffff", // Text color on top of primary backgrounds
+    accent: "#F97316", // CTA buttons, highlights
     // ... see file for full list
   },
 };
@@ -181,7 +181,7 @@ Images in `src/assets/` are processed by Astro at build time — they are automa
 export const heroImage: ImageMetadata | undefined = undefined;
 
 // After (your local image is used):
-import heroImage from '../assets/images/hero/hero.jpg';
+import heroImage from "../assets/images/hero/hero.jpg";
 export const heroImage = heroImage;
 ```
 
@@ -203,10 +203,10 @@ bathroom-tile-work.jpg    → "Bathroom Tile Work"
 
 Recommended image specs:
 
-| Section | Min size | Aspect ratio |
-|---|---|---|
-| Hero | 1600 × 1200 px | 4:3 landscape |
-| About | 900 × 700 px | 4:3 landscape |
+| Section | Min size          | Aspect ratio  |
+| ------- | ----------------- | ------------- |
+| Hero    | 1600 × 1200 px    | 4:3 landscape |
+| About   | 900 × 700 px      | 4:3 landscape |
 | Gallery | 800 × 600 px each | 4:3 landscape |
 
 Supported formats: `.jpg` `.jpeg` `.png` `.webp` `.avif`
@@ -231,6 +231,7 @@ Your post content goes here. Standard Markdown is supported.
 ```
 
 The filename becomes the URL slug. Keep it lowercase with hyphens:
+
 - `how-to-prepare-for-a-plumbing-inspection.md` → `/blog/how-to-prepare-for-a-plumbing-inspection`
 
 Set `draft: true` to write a post without publishing it.
@@ -253,21 +254,21 @@ The `netlify.toml` file already includes security headers (`X-Frame-Options`, `X
 
 ## Tech stack
 
-| Tool | Version | Purpose |
-|---|---|---|
-| [Astro](https://astro.build) | 6 | Framework & static site generator |
-| [Tailwind CSS](https://tailwindcss.com) | 4 | Utility-first styling |
-| [Netlify](https://netlify.com) | — | Hosting, forms, CDN |
-| [pnpm](https://pnpm.io) | 9+ | Package manager |
+| Tool                                    | Version | Purpose                           |
+| --------------------------------------- | ------- | --------------------------------- |
+| [Astro](https://astro.build)            | 6       | Framework & static site generator |
+| [Tailwind CSS](https://tailwindcss.com) | 4       | Utility-first styling             |
+| [Netlify](https://netlify.com)          | —       | Hosting, forms, CDN               |
+| [pnpm](https://pnpm.io)                 | 9+      | Package manager                   |
 
 ---
 
 ## Commands reference
 
-| Command | What it does |
-|---|---|
-| `pnpm install` | Install all dependencies |
-| `pnpm run dev` | Start dev server at `localhost:4321` |
-| `pnpm run build` | Build the production site to `./dist/` |
-| `pnpm run preview` | Preview the production build locally |
-| `pnpm run astro check` | Type-check all `.astro` files |
+| Command                | What it does                           |
+| ---------------------- | -------------------------------------- |
+| `pnpm install`         | Install all dependencies               |
+| `pnpm run dev`         | Start dev server at `localhost:4321`   |
+| `pnpm run build`       | Build the production site to `./dist/` |
+| `pnpm run preview`     | Preview the production build locally   |
+| `pnpm run astro check` | Type-check all `.astro` files          |
