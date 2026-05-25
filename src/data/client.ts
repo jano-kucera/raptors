@@ -15,7 +15,6 @@ export const client = {
   email: 'info@raptors-eissenstadt.at',
   phoneForTel: '0664-306-10-49',
   phoneFormatted: '0664 306 10 49',
-  license: 'Est. 2003',
   address: {
     lineOne: 'Bad-Kissingen-Platz 1',
     lineTwo: 'Sportzentrum Eisenstadt - Kunsteisbahn',
