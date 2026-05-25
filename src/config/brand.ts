@@ -34,21 +34,21 @@ export const brand = {
   // Tailwind v4 @theme picks them up automatically.
   colors: {
     primary:      '#5caa00',
-    primaryLight: '#8aff00',
+    primaryLight: '#7de20a',
     primaryFg:    '#ffffff',
 
-    accent:       '#2e5500',
+    accent:       '#5caa00',
     accentFg:     '#ffffff',
 
     background:   '#ffffff',
-    surface:      '#1c3300',
+    surface:      '#f8fafc',
     border:       '#E2E8F0',
 
-    text:         '#0F172A',
+    text:         '#1b1a1e',
     textMuted:    '#475569',
 
-    dark:         '#0F172A',
-    darkSurface:  '#1E293B',
+    dark:         '#234101',
+    darkSurface:  '#1b1a1e',
   },
 
   // ── Border radius ──────────────────────────────────────────────────────────
