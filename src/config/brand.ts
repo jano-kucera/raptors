@@ -33,15 +33,15 @@ export const brand = {
   // These values are written to CSS custom properties in theme.css.
   // Tailwind v4 @theme picks them up automatically.
   colors: {
-    primary:      '#1B3A6B',
-    primaryLight: '#2563EB',
+    primary:      '#5caa00',
+    primaryLight: '#8aff00',
     primaryFg:    '#ffffff',
 
-    accent:       '#F97316',
+    accent:       '#2e5500',
     accentFg:     '#ffffff',
 
     background:   '#ffffff',
-    surface:      '#F8FAFC',
+    surface:      '#1c3300',
     border:       '#E2E8F0',
 
     text:         '#0F172A',
