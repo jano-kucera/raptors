@@ -4,11 +4,11 @@ import { client } from "../data/client";
 
 const nav = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Blog", href: "/blog" },
-  { label: "Kontakt", href: "/kontakt" },
+  { label: "About", href: "/raptors/about" },
+  { label: "Services", href: "/raptors/services" },
+  { label: "Reviews", href: "/raptors/reviews" },
+  { label: "Blog", href: "/raptors/blog" },
+  { label: "Kontakt", href: "/raptors/kontakt" },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -66,7 +66,7 @@ const currentPath = Astro.url.pathname;
         {client.phoneFormatted}
       </a>
       <a
-        href="/kontakt"
+        href="/raptors/kontakt"
         class="inline-flex min-h-[44px] items-center rounded-md bg-accent px-5 py-2.5 text-sm font-bold text-accent-fg shadow-sm transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Kontakt
@@ -163,7 +163,7 @@ const currentPath = Astro.url.pathname;
         {client.phoneFormatted}
       </a>
       <a
-        href="/kontakt"
+        href="/raptors/kontakt"
         class="flex min-h-[44px] items-center justify-center rounded-md bg-accent px-5 py-3 text-base font-bold text-accent-fg shadow-sm transition-opacity hover:opacity-90"
       >
         Kontaktieren Sie uns
