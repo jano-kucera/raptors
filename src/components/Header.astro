@@ -3,7 +3,7 @@ import { brand } from "../config/brand";
 import { client } from "../data/client";
 
 const nav = [
-  { label: "Home", href: "/raptors" },
+  { label: "Home", href: "/raptors/" },
   { label: "About", href: "/raptors/about" },
   { label: "Services", href: "/raptors/services" },
   { label: "Reviews", href: "/raptors/reviews" },
@@ -36,9 +36,7 @@ const currentPath = Astro.url.pathname;
     >
       {
         nav.map(({ label, href }) => {
-          const isActive =
-            currentPath === href ||
-            (href !== "/" && currentPath.startsWith(href));
+          const isActive = href.endsWith(currentPath);
           return (
             <a
               href={href}
@@ -67,7 +65,7 @@ const currentPath = Astro.url.pathname;
       </a>
       <a
         href="/raptors/kontakt"
-        class="inline-flex min-h-[44px] items-center rounded-md bg-accent px-5 py-2.5 text-sm font-bold text-accent-fg shadow-sm transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="inline-flex min-h-11 items-center rounded-md bg-accent px-5 py-2.5 text-sm font-bold text-accent-fg shadow-sm transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Kontakt
       </a>
@@ -79,7 +77,7 @@ const currentPath = Astro.url.pathname;
       type="button"
       aria-expanded="false"
       aria-controls="mobile-menu"
-      class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md text-text-muted hover:bg-surface lg:hidden"
+      class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-text-muted hover:bg-surface lg:hidden"
     >
       <span class="sr-only">Toggle menu</span>
       <svg
@@ -121,9 +119,7 @@ const currentPath = Astro.url.pathname;
     <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
       {
         nav.map(({ label, href }) => {
-          const isActive =
-            currentPath === href ||
-            (href !== "/" && currentPath.startsWith(href));
+          const isActive = href.endsWith(currentPath);
           return (
             <a
               href={href}
@@ -164,7 +160,7 @@ const currentPath = Astro.url.pathname;
       </a>
       <a
         href="/raptors/kontakt"
-        class="flex min-h-[44px] items-center justify-center rounded-md bg-accent px-5 py-3 text-base font-bold text-accent-fg shadow-sm transition-opacity hover:opacity-90"
+        class="flex min-h-11 items-center justify-center rounded-md bg-accent px-5 py-3 text-base font-bold text-accent-fg shadow-sm transition-opacity hover:opacity-90"
       >
         Kontaktieren Sie uns
       </a>
