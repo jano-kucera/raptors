@@ -11,26 +11,24 @@
  */
 
 export const client = {
-  name: 'Small Business Starter',
-  email: 'hello@example.com',
-  phoneForTel: '555-867-5309',
-  phoneFormatted: '(555) 867-5309',
-  /** Business / contractor license number. Displayed in the header and footer
-   *  as a trust signal. Set to an empty string to hide it. */
-  license: 'Lic# 123456',
+  name: 'EV Raptors Eisenstadt',
+  email: 'info@raptors-eissenstadt.at',
+  phoneForTel: '0664-306-10-49',
+  phoneFormatted: '0664 306 10 49',
+  license: 'Est. 2003',
   address: {
-    lineOne: '123 Main Street',
-    lineTwo: 'Suite 100',
-    city: 'Denver',
-    state: 'CO',
-    zip: '80206',
-    country: 'US',
-    mapLink: 'https://maps.app.goo.gl/example',
+    lineOne: 'Bad-Kissingen-Platz 1',
+    lineTwo: 'Sportzentrum Eisenstadt - Kunsteisbahn',
+    city: 'Eisenstadt',
+    state: 'Styria',
+    zip: '7000',
+    country: 'AT',
+    mapLink: 'https://maps.app.goo.gl/1Zd3RiohaXJmqGaP6',
   },
   socials: {
-    facebook: 'https://www.facebook.com/',
-    instagram: 'https://www.instagram.com/',
-    google: 'https://www.google.com/maps',
+    facebook: 'https://www.facebook.com/RapsEisenstadt/',
+    instagram: 'https://www.instagram.com/raptors.eisenstadt',
+    google: 'https://maps.app.goo.gl/1Zd3RiohaXJmqGaP6',
   },
   domain: 'https://www.example.com',
 } as const;

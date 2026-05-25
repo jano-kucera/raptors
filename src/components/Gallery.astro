@@ -122,33 +122,36 @@ const {
 
 <script>
   function initGallery() {
-    document.querySelectorAll<HTMLElement>("[data-gallery-item]").forEach((item) => {
-      const img = item.querySelector<HTMLImageElement>("[data-gallery-img]");
-      const skeleton = item.querySelector<HTMLElement>("[data-skeleton]");
-      const errorState = item.querySelector<HTMLElement>("[data-error-state]");
-      if (!img || !skeleton || !errorState) return;
+    document
+      .querySelectorAll<HTMLElement>("[data-gallery-item]")
+      .forEach((item) => {
+        const img = item.querySelector<HTMLImageElement>("[data-gallery-img]");
+        const skeleton = item.querySelector<HTMLElement>("[data-skeleton]");
+        const errorState =
+          item.querySelector<HTMLElement>("[data-error-state]");
+        if (!img || !skeleton || !errorState) return;
 
-      function onLoad() {
-        img!.classList.remove("opacity-0");
-        skeleton!.remove();
-      }
+        function onLoad() {
+          img!.classList.remove("opacity-0");
+          skeleton!.remove();
+        }
 
-      function onError() {
-        skeleton!.remove();
-        img!.classList.add("hidden");
-        errorState!.classList.remove("hidden");
-        errorState!.classList.add("flex");
-      }
+        function onError() {
+          skeleton!.remove();
+          img!.classList.add("hidden");
+          errorState!.classList.remove("hidden");
+          errorState!.classList.add("flex");
+        }
 
-      // Image already cached and decoded before script ran
-      if (img.complete) {
-        img.naturalWidth > 0 ? onLoad() : onError();
-        return;
-      }
+        // Image already cached and decoded before script ran
+        if (img.complete) {
+          img.naturalWidth > 0 ? onLoad() : onError();
+          return;
+        }
 
-      img.addEventListener("load", onLoad, { once: true });
-      img.addEventListener("error", onError, { once: true });
-    });
+        img.addEventListener("load", onLoad, { once: true });
+        img.addEventListener("error", onError, { once: true });
+      });
   }
 
   initGallery();
