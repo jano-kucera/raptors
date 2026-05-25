@@ -14,12 +14,12 @@
 
 export const brand = {
   // ── Site Identity ──────────────────────────────────────────────────────────
-  name: 'Small Business Starter',
-  tagline: 'Professional service you can trust.',
+  name: 'Raptors Eisenstadt',
+  tagline: 'Eishockey aus Leidenschaft',
   description:
-    'A fast, mobile-first small-business website template built with Astro 6 and Tailwind v4. Fully customisable for any trade or service business.',
-  url: 'https://example.com',
-  locale: 'en_US',
+    'Willkommen beim burgenländischen Eishockeyverein, der für Herz, Härte und echten Teamgeist steht. Bei uns trifft Tradition auf Tempo, Nachwuchs auf Kampfgeist - und Fans auf ein unvergleichliches Erlebnis am Platz.',
+  url: 'https://www.raptors-eisenstadt.at/',
+  locale: 'de_AT',
 
   // ── Fonts ──────────────────────────────────────────────────────────────────
   // To swap fonts: change the `name` values here AND update astro.config.mjs
