@@ -30,37 +30,37 @@ const {
       title: "General Repairs",
       description:
         "Reliable fixes for plumbing, electrical, drywall, and more — done right the first time.",
-      href: "/services",
+      href: "/sponsoren",
     },
     {
       title: "Installations",
       description:
         "Professional installation of fixtures, appliances, and systems with clean, code-compliant results.",
-      href: "/services",
+      href: "/sponsoren",
     },
     {
       title: "Inspections",
       description:
         "Thorough property inspections to catch issues before they become costly problems.",
-      href: "/services",
+      href: "/sponsoren",
     },
     {
       title: "Remodeling",
       description:
         "Transform kitchens, bathrooms, and living spaces with expert craftsmanship and attention to detail.",
-      href: "/services",
+      href: "/sponsoren",
     },
     {
       title: "Emergency Service",
       description:
         "24/7 emergency response when you need help fast — we're just a phone call away.",
-      href: "/services",
+      href: "/sponsoren",
     },
     {
       title: "Maintenance Plans",
       description:
         "Scheduled preventive maintenance to protect your property and avoid surprise repair bills.",
-      href: "/services",
+      href: "/sponsoren",
     },
   ],
 } = Astro.props;
@@ -86,7 +86,7 @@ const {
         services.map((service, i) => (
           <li>
             <a
-              href={service.href || "/services"}
+              href={service.href || "/sponsoren"}
               aria-label={`Learn more about ${service.title}`}
               class="group flex h-full cursor-pointer flex-col rounded-lg border border-border bg-background p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
             >
