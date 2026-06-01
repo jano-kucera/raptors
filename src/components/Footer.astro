@@ -1,23 +1,25 @@
 ---
 import { brand } from "../config/brand";
+import { ROUTES } from "../config/routes";
 import { client } from "../data/client";
 
 const year = new Date().getFullYear();
 
 const navCols = [
   {
-    title: "Company",
+    title: "Team",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Services", href: "/services" },
-      { label: "Reviews", href: "/reviews" },
-      { label: "Blog", href: "/blog" },
+      ROUTES.juniors,
+      ROUTES.services,
+      ROUTES.reviews,
+      ROUTES.blog,
+      ROUTES.contact,
     ],
   },
   {
-    title: "Support",
+    title: "Helfen",
     links: [
-      { label: "Kontakt", href: "/raptors/kontakt" },
+      ROUTES.contact,
       { label: "Privacy", href: "/raptors/privacy" },
       { label: "Terms", href: "/raptors/terms" },
     ],

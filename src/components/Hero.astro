@@ -3,12 +3,7 @@ import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import { brand } from "../config/brand";
 import { client } from "../data/client";
-import { heroImage as localHeroImage } from "../config/images";
-
-// Fallback Unsplash URL used until a local image is added to
-// src/assets/images/hero/ and registered in src/config/images.ts
-const PLACEHOLDER =
-  "https://scontent-vie1-1.cdninstagram.com/v/t39.30808-6/367497622_17921975477767796_2894774884152003508_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=MzE3MzcwODQ2MTI0NTY1ODIyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTM2NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Z-xqFZVqnmQQ7kNvwGqr-0_&_nc_oc=AdpqdhstzllqbbkFhISAs1W89ATHcS6-Pky6YLoAT_mbidQ6AfCRzCI0O6pS0y2jXWGxC7FS7jQIGPrmnkBAxBxq&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_gid=ucx2URDYYkwbUwxD0N98Tw&_nc_ss=7a22e&oh=00_Af6WqhIc_l4TtvxZZjObMcqUw2l5uUFEgOxMDVNz0sO-aQ&oe=6A1A550B";
+import teamImg from "../assets/images/team.jpg";
 
 interface Props {
   topper?: string;
@@ -30,8 +25,8 @@ const {
   ctaHref = "/raptors/kontakt",
   secondaryLabel = "Spielplan",
   secondaryHref = "/raptors/spielplan",
-  imageSrc = localHeroImage ?? PLACEHOLDER,
-  imageAlt = "Professional tradesperson at work",
+  imageSrc = teamImg,
+  imageAlt = "Raptors team",
 } = Astro.props;
 ---
 

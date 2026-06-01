@@ -1,0 +1,255 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Banner from "../components/Banner.astro";
+import CTA from "../components/CTA.astro";
+import { Image } from "astro:assets";
+import { brand } from "../config/brand";
+import kidsImg from "../assets/images/kids.jpg";
+import trainingImg from "../assets/images/training.jpg";
+
+const team = [
+  {
+    name: "Christoph Hajdusich",
+    phone: "0670 602 23 04",
+    role: "Jugendtrainer U14 - U17",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    description1:
+      "Jugendtrainer seit über 20 Jahren - eine echte Institution in unserem Verein.",
+    description2:
+      "Top ausgebildet, geduldig, erfahren und fachlich herausragend.",
+    description3:
+      "Er steht für Qualität, Stabilität und eine Nachwuchsarbeit, die auf Respekt, Struktur und Liebe zum Sport aufbaut.",
+  },
+  {
+    name: "Peter Petrovic",
+    phone: "0676 930 28 34",
+    role: "Jugendtrainer U10 - U12",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
+    description1:
+      "Unser neuer Jugendtrainer - und schon jetzt ein absoluter Gewinn.",
+    description2:
+      "Peter bringt riesige Leidenschaft, Engagement und moderne Trainingsideen mit.",
+    description3:
+      "Mit seiner offenen, motivierenden Art sorgt er dafür, dass sich Kids jeder Herkunft und jedes Levels wohlfühlen.",
+  },
+];
+---
+
+<BaseLayout
+  title="Nachwuchs"
+  description={`Learn about ${brand.name} — our story, team, and commitment to quality service.`}
+>
+  <Header slot="header" />
+
+  <Banner title="Nachwuchs" />
+
+  <!-- Story 1 -->
+  <section class="py-section">
+    <div
+      class="mx-auto grid max-w-site grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14"
+    >
+      <div class="overflow-hidden rounded-lg shadow-lg">
+        <Image
+          src={kidsImg}
+          alt="Juniors team"
+          width={800}
+          height={800}
+          loading="lazy"
+          class="size-full object-cover"
+        />
+      </div>
+      <div class="space-y-5">
+        <span
+          class="text-topper font-bold uppercase tracking-widest text-accent"
+          >Start</span
+        >
+        <h2 class="font-heading text-h2 font-bold uppercase text-text">
+          UNSERE ZUKUNFT AUF DEM EIS!
+        </h2>
+        <p class="text-text-muted leading-relaxed">
+          Unsere Nachwuchsarbeit ist das Herzstück unseres Vereins. In den
+          Altersklassen UB/U10, U12, U14 und U17 treten unsere jungen
+          Spielerinnen in der offiziellen NO Landesliga an-mit Leidenschaft,
+          Sportsgeist und echter Teamkultur. Wir bieten Kindern und Jugendlichen
+          einen Platz, an dem sie wachsen können: sportlich, persönlich und als
+          Teil einer Gemeinschaft.
+
+          <div class="mt-6 text-accent">
+            Bei uns zählt nicht, wie gut du bist. Bei uns zählt, dass du da
+            bist.
+          </div>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story 2 -->
+  <section class="py-section bg-dark-surface">
+    <div
+      class="mx-auto grid max-w-site grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14"
+    >
+      <div class="space-y-5">
+        <span
+          class="text-topper font-bold uppercase tracking-widest text-accent"
+          >Jetzt</span
+        >
+        <h2 class="font-heading text-h2 font-bold uppercase text-surface">
+          WIE WERDE ICH NACHWUCHSSPIELERIN?
+        </h2>
+        <div
+          class="space-y-4 rounded-3xl border border-white/10 bg-surface/40 p-6 shadow-xl"
+        >
+          <p class="text-surface leading-relaxed">
+            Du möchtest Eishockey ausprobieren? <strong class="text-accent"
+              >Großartig!</strong
+            >
+            <br /> Bei uns ist der Einstieg unkompliziert, freundlich und für alle
+            offen - egal ob Mädchen oder Bursch, ob Anfänger oder schon mit Erfahrung.
+            So funktioniert's:
+          </p>
+
+          <ul class="list-decimal list-inside mt-4 space-y-6 text-surface">
+            <li class="space-y-2">
+              <span class="font-semibold text-text">
+                Einfach zum Schnuppertraining kommen
+              </span>
+              <div class="text-sm leading-relaxed text-surface-muted">
+                Wir bieten regelmäßige, kostenlose Schnuppertrainings an.
+                Eislaufschuhe können wir bei Bedarf bereitstellen.
+              </div>
+            </li>
+            <li class="space-y-2">
+              <span class="font-semibold text-text">
+                Erste Schritte auf dem Eis
+              </span>
+              <div class="text-sm leading-relaxed text-surface-muted">
+                Unsere Trainer unterstützen jedes Kind individuell -
+                spielerisch, sicher und altersgerecht. Niemand muss etwas
+                können, bevor er oder sie das erste Mal aufs Eis geht.
+              </div>
+            </li>
+            <li class="space-y-2">
+              <span class="font-semibold text-text">
+                Spaß entdecken & Team kennenlernen
+              </span>
+              <div class="text-sm leading-relaxed text-surface-muted">
+                Eishockey ist eine Mischung aus Bewegung, Teamgeist und viel
+                Spaß. Schon nach den ersten Einheiten merken viele Kinder: Das
+                ist genau mein Sport!
+              </div>
+            </li>
+            <li class="space-y-2">
+              <span class="font-semibold text-text">
+                Anmeldung & Einstieg in die passende Altersgruppe
+              </span>
+              <div class="text-sm leading-relaxed text-surface-muted">
+                Nach dem Probetraining findet ihr gemeinsam mit den Trainern die
+                richtige Mannschaft: U8/U10, U12, U14 oder U17.
+              </div>
+            </li>
+            <li class="space-y-2">
+              <span class="font-semibold text-text">
+                Ausrüstung? Kein Stress!
+              </span>
+              <div class="text-sm leading-relaxed text-surface-muted">
+                Wir helfen Schritt für Schritt: Was man zuerst braucht, was
+                später - und wo man gutes Equipment günstig bekommt.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg">
+        <Image
+          src={trainingImg}
+          alt="Training session"
+          width={800}
+          height={800}
+          loading="lazy"
+          class="size-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="bg-surface py-section">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <span
+          class="text-topper font-bold uppercase tracking-widest text-accent"
+          >Our Team</span
+        >
+        <h2 class="mt-2 font-heading text-h2 font-bold uppercase text-text">
+          Meet the crew
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+        {
+          team.map(
+            ({
+              name,
+              phone,
+              role,
+              image,
+              description1,
+              description2,
+              description3,
+            }) => (
+              <div class="overflow-hidden rounded-lg bg-background shadow-sm">
+                <div class="grid grid-cols-2">
+                  <div>
+                    <Image
+                      src={image}
+                      alt={name}
+                      width={400}
+                      height={300}
+                      loading="lazy"
+                      class="aspect-square w-full object-cover"
+                    />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="font-heading text-lg font-semibold text-text">
+                      {name}
+                    </h3>
+                    <p class="text-sm leading-relaxed text-surface-muted">
+                      {description1}
+                    </p>
+                    <br />
+                    <p class="text-sm leading-relaxed text-surface-muted">
+                      {description2}
+                    </p>
+                    <br />
+                    <p class="text-sm leading-relaxed text-surface-muted">
+                      {description3}
+                    </p>
+                  </div>
+                </div>
+                <div class="p-5 text-center">
+                  <h3 class="font-heading text-lg font-semibold text-text">
+                    <a
+                      href={`tel:${phone}`}
+                      class="text-accent hover:underline"
+                    >
+                      {phone}
+                    </a>
+                  </h3>
+                  <p class="text-sm text-text-muted">{role}</p>
+                </div>
+              </div>
+            ),
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+
+  <Footer slot="footer" />
+</BaseLayout>

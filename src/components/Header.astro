@@ -1,15 +1,9 @@
 ---
 import { brand } from "../config/brand";
+import { ROUTES, type Route } from "../config/routes";
 import { client } from "../data/client";
 
-const nav = [
-  { label: "Home", href: "/raptors/" },
-  { label: "About", href: "/raptors/about" },
-  { label: "Services", href: "/raptors/services" },
-  { label: "Reviews", href: "/raptors/reviews" },
-  { label: "Blog", href: "/raptors/blog" },
-  { label: "Kontakt", href: "/raptors/kontakt" },
-];
+const nav: Route[] = Object.values(ROUTES);
 
 const currentPath = Astro.url.pathname;
 ---
