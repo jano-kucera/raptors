@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { galleryImages as defaultImages } from "../config/images";
-import type { GalleryImage } from "../config/images";
+import { galleryImages } from "../config/images";
+import type { DiscoveredImage } from "../config/images";
 
 interface Props {
   topper?: string;
   heading?: string;
   description?: string;
-  images?: GalleryImage[];
+  images?: DiscoveredImage[];
   ctaLabel?: string;
   ctaHref?: string;
 }
@@ -15,7 +15,7 @@ interface Props {
 const {
   topper = "Galerie",
   heading = "Aktuelle Fotos",
-  images = defaultImages,
+  images = galleryImages,
 } = Astro.props;
 ---
 

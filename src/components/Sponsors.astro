@@ -1,33 +1,36 @@
 ---
-import { getCollection } from "astro:content";
+import { sponsorImages, type DiscoveredImage } from "../config/images";
+import { Image } from "astro:assets";
 
-const sponsorImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/images/sponsors/*.{jpeg,jpg,png,gif,svg,webp}",
-  { eager: true },
-);
+interface Props {
+  topper?: string;
+  heading?: string;
+  description?: string;
+  images?: DiscoveredImage[];
+  ctaLabel?: string;
+  ctaHref?: string;
+}
 
-const sponsors = Object.entries(sponsorImages).map(([path, module]) => ({
-  src: path,
-  alt:
-    path
-      .split("/")
-      .pop()
-      ?.replace(/\.[^.]+$/, "") || "Sponsor",
-}));
+const { images = sponsorImages } = Astro.props;
 ---
 
 <section class="sponsors-section">
   <div class="sponsors-container">
     {
-      sponsors.map((sponsor) => (
+      images.map(({ src, alt }) => (
         <div class="sponsor-logo">
-          <img src={sponsor.src} alt={sponsor.alt} />
+          <Image
+            src={src}
+            alt={alt}
+            width={150}
+            loading="lazy"
+            class="size-full object-contain"
+          />
         </div>
       ))
     }
   </div>
 </section>
-
 <style>
   .sponsors-section {
     padding: 2rem 1rem;
