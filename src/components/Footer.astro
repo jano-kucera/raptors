@@ -2,9 +2,12 @@
 import { brand } from "../config/brand";
 import { ROUTES } from "../config/routes";
 import { client } from "../data/client";
+import Sponsors from "./Sponsors.astro";
 
 const year = new Date().getFullYear();
 ---
+
+<Sponsors />
 
 <footer class="bg-dark text-surface/80" transition:persist>
   <div class="mx-auto max-w-site px-4 py-12 sm:px-6 lg:py-16">

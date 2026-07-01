@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+
+const sponsorImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/sponsors/*.{jpeg,jpg,png,gif,svg,webp}",
+  { eager: true },
+);
+
+const sponsors = Object.entries(sponsorImages).map(([path, module]) => ({
+  src: path,
+  alt:
+    path
+      .split("/")
+      .pop()
+      ?.replace(/\.[^.]+$/, "") || "Sponsor",
+}));
+---
+
+<section class="sponsors-section">
+  <div class="sponsors-container">
+    {
+      sponsors.map((sponsor) => (
+        <div class="sponsor-logo">
+          <img src={sponsor.src} alt={sponsor.alt} />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .sponsors-section {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+  }
+
+  .sponsors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .sponsor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+  }
+
+  .sponsor-logo img {
+    max-width: 150px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .sponsor-logo img:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .sponsors-container {
+      gap: 1rem;
+    }
+
+    .sponsor-logo {
+      height: 60px;
+    }
+
+    .sponsor-logo img {
+      max-width: 120px;
+      max-height: 60px;
+    }
+  }
+</style>
