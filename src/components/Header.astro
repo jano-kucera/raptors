@@ -6,6 +6,8 @@ import { client } from "../data/client";
 const nav: Route[] = Object.values(ROUTES);
 
 const currentPath = Astro.url.pathname;
+
+const isHrefActive = (href: string) => currentPath === href;
 ---
 
 <header
@@ -30,7 +32,7 @@ const currentPath = Astro.url.pathname;
     >
       {
         nav.map(({ label, href }) => {
-          const isActive = href.endsWith(currentPath);
+          const isActive = isHrefActive(href);
           return (
             <a
               href={href}
@@ -113,7 +115,7 @@ const currentPath = Astro.url.pathname;
     <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
       {
         nav.map(({ label, href }) => {
-          const isActive = href.endsWith(currentPath);
+          const isActive = isHrefActive(href);
           return (
             <a
               href={href}
@@ -208,8 +210,7 @@ const currentPath = Astro.url.pathname;
 
       desktopLinks.forEach((link) => {
         const href = link.getAttribute("href") || "";
-        const isActive =
-          href === path || (href !== "/" && path.startsWith(href));
+        const isActive = href === path;
         link.classList.toggle(activeClasses[0], isActive);
         link.classList.toggle(activeClasses[1], isActive);
         link.classList.toggle(inactiveDesktop[0], !isActive);
@@ -220,8 +221,7 @@ const currentPath = Astro.url.pathname;
 
       mobileLinks.forEach((link) => {
         const href = link.getAttribute("href") || "";
-        const isActive =
-          href === path || (href !== "/" && path.startsWith(href));
+        const isActive = href === path;
         link.classList.toggle(activeClasses[0], isActive);
         link.classList.toggle(activeClasses[1], isActive);
         link.classList.toggle(inactiveMobile[0], !isActive);
